@@ -1,0 +1,33 @@
+package HomeWorkApp8;
+
+public class Cat implements Action {
+    private String name;
+    private int runDistance;
+    private int jumpHeight;
+
+    public Cat(String name, int distance, int jumpHeight) {
+        this.name = name;
+        this.runDistance = distance;
+        this.jumpHeight = jumpHeight;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("кот " + this.name + " пробежал " + this.getRunDistance());
+    }
+
+    @Override
+    public void jump() {
+        System.out.println("кот " + this.name + " прыгнул " + this.getJumpHeight());
+    }
+
+    @Override
+    public int getRunDistance() {
+        return this.runDistance;
+    }
+
+    @Override
+    public int getJumpHeight() {
+        return this.jumpHeight;
+    }
+}
